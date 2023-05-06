@@ -1,6 +1,7 @@
 extends Node2D
 @onready var shove_area: Area2D = $ShoveArea
-@export var ball = RigidBody2D
+@export var ball:RigidBody2D
+@export var shove_strength: float = 1000
 
 func _physics_process(delta: float) -> void:
 	var mouse_position = get_viewport().get_mouse_position()
@@ -8,4 +9,6 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		print(shove_area.overlaps_body(ball))
+		if shove_area.overlaps_body(ball):
+			var force = position.direction_to(ball.position) * shove_strength
+			ball.apply_central_impulse(force)

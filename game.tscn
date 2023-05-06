@@ -24,4 +24,4 @@ uv = PackedVector2Array(300, 200, 0, 720, 1280, 720, 1280, 0)
 ball = NodePath("../Ball")
 
 [node name="Ball" parent="." instance=ExtResource("2_oupdh")]
-position = Vector2(132, 46)
+position = Vector2(640, 50)
