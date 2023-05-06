@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c5u2xncxw8sr5"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_ew2ou"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_poqa8"]
+size = Vector2(16, 16)
+
+[node name="Ball" type="RigidBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(2.38419e-07, -1.19209e-06)
+scale = Vector2(16, 16)
+texture = SubResource("PlaceholderTexture2D_ew2ou")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_poqa8")
