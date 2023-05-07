@@ -21,3 +21,9 @@ func unfreeze():
 	if freeze:
 		freeze = false
 		unfrozen.emit()
+
+func floor_hit():
+	$FloorHit.emitting = true
+
+func disable():
+	process_mode = Node.PROCESS_MODE_DISABLED
