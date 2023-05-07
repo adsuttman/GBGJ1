@@ -74,5 +74,6 @@ text = "Free Play"
 [node name="VSeparator3" type="VSeparator" parent="Panel/VFlowContainer"]
 layout_mode = 2
 
+[connection signal="pressed" from="Panel/VFlowContainer/ScoreMode" to="." method="_on_score_mode_pressed"]
 [connection signal="pressed" from="Panel/VFlowContainer/TimerMode" to="." method="_on_timer_mode_pressed"]
 [connection signal="pressed" from="Panel/VFlowContainer/FreePlay" to="." method="_on_free_play_pressed"]

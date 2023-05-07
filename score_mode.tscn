@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://juxlckqyyhb5"]
+
+[ext_resource type="Script" path="res://score_mode.gd" id="1_nol5u"]
+[ext_resource type="PackedScene" uid="uid://d4eeknwdl85f1" path="res://game.tscn" id="1_tibg5"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_3tkf6"]
+font_color = Color(0, 0, 0, 1)
+
+[node name="ScoreMode" type="Node2D"]
+script = ExtResource("1_nol5u")
+
+[node name="UI" type="Control" parent="."]
+top_level = true
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1280.0
+offset_bottom = 720.0
+
+[node name="Score" type="Label" parent="UI"]
+visible = false
+top_level = true
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -20.0
+offset_right = 20.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "
+0 points"
+label_settings = SubResource("LabelSettings_3tkf6")
+
+[node name="Game" parent="." instance=ExtResource("1_tibg5")]
+
+[connection signal="ball_touched_floor" from="Game" to="." method="_on_game_ball_touched_floor"]
+[connection signal="game_started" from="Game" to="." method="_on_game_game_started"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dp2430ah85wf6"]
+
+[ext_resource type="Texture2D" uid="uid://b747o1a05o1yl" path="res://circle.png" id="1_12dhe"]
+[ext_resource type="Script" path="res://collectible.gd" id="1_b0eyn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xhklj"]
+
+[node name="Collectible" type="Area2D"]
+modulate = Color(1, 1, 0.129412, 1)
+script = ExtResource("1_b0eyn")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.076, 0.076)
+texture = ExtResource("1_12dhe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("CircleShape2D_xhklj")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
