@@ -1,5 +1,9 @@
 extends Node2D
 
-func _ready():
-#	Input.mouse_mode = Input.MOUSE_MODE_CONFINED
-	pass
+@onready var ball = $Ball
+
+signal ball_touched_floor
+
+func _physics_process(delta: float) -> void:
+	if ball.position.y > 712:
+		ball_touched_floor.emit()
