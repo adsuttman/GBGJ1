@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://juxlckqyyhb5"]
+[gd_scene load_steps=6 format=3 uid="uid://juxlckqyyhb5"]
 
 [ext_resource type="Script" path="res://score_mode.gd" id="1_nol5u"]
 [ext_resource type="PackedScene" uid="uid://d4eeknwdl85f1" path="res://game.tscn" id="1_tibg5"]
 [ext_resource type="PackedScene" uid="uid://dp2430ah85wf6" path="res://collectible.tscn" id="2_f5ij8"]
+[ext_resource type="PackedScene" uid="uid://c82xx3vfs1iw7" path="res://effect_area.tscn" id="3_1470f"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_3tkf6"]
 font_color = Color(0, 0, 0, 1)
@@ -14,6 +15,7 @@ min_spawn_x = 64
 max_spawn_x = 1216
 min_spawn_y = 64
 max_spawn_y = 476
+area = ExtResource("3_1470f")
 
 [node name="UI" type="Control" parent="."]
 top_level = true

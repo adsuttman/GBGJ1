@@ -11,6 +11,9 @@ extends Node2D
 @export_range(0, 720) var min_spawn_y: int
 @export_range(0, 720) var max_spawn_y: int
 
+@export_category("Effect Area Settings")
+@export var area: PackedScene
+
 
 var score: int = 0
 var random: RandomNumberGenerator = RandomNumberGenerator.new()
@@ -24,11 +27,17 @@ func spawn_collectible():
 	inst.position.y = random.randi_range(min_spawn_y,max_spawn_y)
 	inst.ball_entered.connect(on_collection)
 	add_child(inst)
-	
-func on_collection():
+
+func spawn_effect_area(transform: Transform2D):
+	var inst = area.instantiate()
+	inst.transform = transform
+	add_child(inst)
+
+func on_collection(transform: Transform2D):
 	score += 1
 	update_label()
 	spawn_collectible()
+	spawn_effect_area(transform)
 
 func update_label():
 	label.text = String.num(score) + " points"
