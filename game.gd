@@ -29,6 +29,7 @@ func _on_ball_unfrozen() -> void:
 	if !started:
 		game_started.emit()
 		started = true
+		$Tutorial.hide()
 
 
 func _on_retry_pressed() -> void:
