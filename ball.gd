@@ -10,6 +10,9 @@ func _physics_process(delta: float) -> void:
 #	print(speed)
 	if speed > 1:
 		speeding.emit(speed)
+		$Trail.emitting = true
+	else:
+		$Trail.emitting = false
 
 func stop():
 	PhysicsServer2D.body_set_state(get_rid(),PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)

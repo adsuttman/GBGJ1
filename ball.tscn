@@ -23,3 +23,14 @@ texture = ExtResource("1_vtvyh")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_a86c7")
+
+[node name="Trail" type="CPUParticles2D" parent="."]
+z_index = 1
+emitting = false
+amount = 50
+fixed_fps = 60
+particle_flag_align_y = true
+spread = 90.0
+scale_amount_min = 5.0
+scale_amount_max = 5.0
+color = Color(1, 0, 0, 1)
