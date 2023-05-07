@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://c82xx3vfs1iw7"]
+
+[ext_resource type="Texture2D" uid="uid://b747o1a05o1yl" path="res://circle.png" id="1_fp2ry"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sqgr0"]
+radius = 50.0
+
+[node name="EffectArea" type="Area2D"]
+modulate = Color(0, 0, 1, 0.12549)
+priority = 1.0
+gravity_space_override = 1
+gravity_point = true
+gravity_point_unit_distance = 50.0
+gravity = 50.0
+linear_damp = 10.0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.387, 0.387)
+texture = ExtResource("1_fp2ry")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_sqgr0")

@@ -19,6 +19,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		if shove_area.overlaps_body(ball):
 			var force = position.direction_to(ball.position) * shove_strength
 			ball.apply_central_impulse(force)
+#			print("shoved")
 
 
 func _on_shove_area_body_entered(body: Node2D) -> void:
