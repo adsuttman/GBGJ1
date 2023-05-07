@@ -85,6 +85,7 @@ position = Vector2(640, 360)
 
 [node name="GameOver" type="Control" parent="."]
 visible = false
+z_index = 1
 layout_mode = 3
 anchors_preset = 0
 offset_right = 1280.0

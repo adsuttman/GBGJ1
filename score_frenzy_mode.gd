@@ -28,12 +28,12 @@ func spawn_collectible():
 	inst.position.x = random.randi_range(min_spawn_x,max_spawn_x)
 	inst.position.y = random.randi_range(min_spawn_y,max_spawn_y)
 	inst.ball_entered.connect(on_collection)
-	add_child(inst)
+	game.add_child(inst)
 
 func spawn_effect_area(transform: Transform2D):
 	var inst = area.instantiate()
 	inst.transform = transform.scaled_local(area_scale)
-	add_child(inst)
+	game.add_child(inst)
 
 func on_collection(transform: Transform2D):
 	score += 1
