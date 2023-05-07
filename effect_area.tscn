@@ -7,6 +7,7 @@
 
 [node name="EffectArea" type="Area2D"]
 modulate = Color(0, 0, 1, 0.12549)
+scale = Vector2(2, 2)
 priority = 1.0
 gravity_point = true
 gravity_point_unit_distance = 50.0

@@ -13,6 +13,7 @@ extends Node2D
 
 @export_category("Effect Area Settings")
 @export var area: PackedScene
+@export var area_scale: Vector2 = Vector2(1,1)
 
 
 var score: int = 0
@@ -30,7 +31,7 @@ func spawn_collectible():
 
 func spawn_effect_area(transform: Transform2D):
 	var inst = area.instantiate()
-	inst.transform = transform
+	inst.transform = transform.scaled_local(area_scale)
 	add_child(inst)
 
 func on_collection(transform: Transform2D):

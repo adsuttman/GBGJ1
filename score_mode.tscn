@@ -16,6 +16,7 @@ max_spawn_x = 1216
 min_spawn_y = 64
 max_spawn_y = 476
 area = ExtResource("3_1470f")
+area_scale = Vector2(2, 2)
 
 [node name="UI" type="Control" parent="."]
 top_level = true
