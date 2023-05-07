@@ -22,6 +22,7 @@ grow_vertical = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Time" type="Label" parent="UI"]
+visible = false
 layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
@@ -38,4 +39,5 @@ label_settings = SubResource("LabelSettings_j6bhq")
 process_callback = 0
 
 [connection signal="ball_touched_floor" from="Game" to="." method="_on_game_ball_touched_floor"]
+[connection signal="game_started" from="Game" to="." method="_on_game_game_started"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

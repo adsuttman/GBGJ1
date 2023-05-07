@@ -2,6 +2,8 @@ extends RigidBody2D
 
 var speed_points: int = 0
 
+signal unfrozen
+
 func _physics_process(delta: float) -> void:
 	var velocity: Vector2
 	velocity = PhysicsServer2D.body_get_state(get_rid(),PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY)
@@ -14,3 +16,4 @@ func stop():
 
 func unfreeze():
 	freeze = false
+	unfrozen.emit()

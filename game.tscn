@@ -115,3 +115,5 @@ grow_horizontal = 2
 grow_vertical = 0
 text = "Your score was: Placeholder"
 label_settings = SubResource("LabelSettings_7h8eb")
+
+[connection signal="unfrozen" from="Ball" to="." method="_on_ball_unfrozen"]
