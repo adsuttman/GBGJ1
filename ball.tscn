@@ -14,6 +14,7 @@ gravity_scale = 0.75
 lock_rotation = true
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(2.38419e-07, -1.19209e-06)
 texture = ExtResource("1_vtvyh")
 
