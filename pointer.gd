@@ -1,6 +1,7 @@
 extends Node2D
 @onready var shove_area: Area2D = $ShoveArea
 @onready var indicator: Sprite2D = $ShoveIndicator
+@onready var game = $".."
 
 @export var ball: RigidBody2D
 @export var shove_strength: float = 500
@@ -29,8 +30,9 @@ func _unhandled_input(event: InputEvent) -> void:
 #				print("shoved")
 				shove_delay  = 15
 		if event.button_index == MOUSE_BUTTON_RIGHT:
-			if shove_area.overlaps_body(ball):
+			if shove_area.overlaps_body(ball) and game.speed_points == 100:
 				ball.stop()
+				game.set_speed_points(0)
 
 
 func _on_shove_area_body_entered(body: Node2D) -> void:
