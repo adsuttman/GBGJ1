@@ -21,12 +21,15 @@ func _physics_process(delta: float) -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.button_index == MouseButton.MOUSE_BUTTON_LEFT and shove_delay == 0:
+		if event.button_index == MOUSE_BUTTON_LEFT and shove_delay == 0:
 			if shove_area.overlaps_body(ball):
 				var force = position.direction_to(ball.position) * shove_strength
 				ball.apply_central_impulse(force)
 #				print("shoved")
 				shove_delay  = 15
+		if event.button_index == MOUSE_BUTTON_RIGHT:
+			if shove_area.overlaps_body(ball):
+				ball.stop()
 
 
 func _on_shove_area_body_entered(body: Node2D) -> void:

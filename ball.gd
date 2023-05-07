@@ -8,3 +8,6 @@ func _physics_process(delta: float) -> void:
 	var speed = velocity.length_squared()/1000000
 	speed_points += speed
 #	print(speed_points)
+
+func stop():
+	PhysicsServer2D.body_set_state(get_rid(),PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)
