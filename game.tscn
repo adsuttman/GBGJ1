@@ -11,11 +11,11 @@ size = Vector2(1280, 720)
 bounce = 0.5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_o05jv"]
-size = Vector2(1380, 50)
+size = Vector2(1680, 200)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axyja"]
 resource_name = "WallRec"
-size = Vector2(50, 820)
+size = Vector2(200, 1120)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tarvr"]
 rough = true
@@ -46,22 +46,22 @@ ball = NodePath("../Ball")
 physics_material_override = SubResource("PhysicsMaterial_ct78i")
 
 [node name="Ceiling" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(640, -25)
+position = Vector2(640, -100)
 shape = SubResource("RectangleShape2D_o05jv")
 
 [node name="LeftWall" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(-25, 360)
+position = Vector2(-100, 363)
 shape = SubResource("RectangleShape2D_axyja")
 
 [node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
-position = Vector2(1305, 360)
+position = Vector2(1380, 360)
 shape = SubResource("RectangleShape2D_axyja")
 
 [node name="FloorBoundary" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_tarvr")
 
 [node name="Floor" type="CollisionShape2D" parent="FloorBoundary"]
-position = Vector2(640, 745)
+position = Vector2(640, 820)
 shape = SubResource("RectangleShape2D_o05jv")
 
 [node name="Ball" parent="." instance=ExtResource("2_oupdh")]
