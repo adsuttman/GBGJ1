@@ -17,6 +17,7 @@ func _physics_process(delta: float) -> void:
 
 func set_speed_points(val: int):
 	speed_points = clampi(val,0,max_speed_points)
+	$Pointer/ProgressBar.value = speed_points
 
 func display_game_over(score: String):
 	$GameOver/GameOverText/Score.text = "Your score was: " + score

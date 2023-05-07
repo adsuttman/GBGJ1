@@ -31,6 +31,7 @@ font_color = Color(0, 0, 0, 1)
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_n41f6")
+max_speed_points = 200
 
 [node name="PlayArea" type="Area2D" parent="."]
 visible = false
@@ -51,6 +52,22 @@ uv = PackedVector2Array(300, 200, 0, 720, 1280, 720, 1280, 0)
 [node name="Pointer" parent="." node_paths=PackedStringArray("ball") instance=ExtResource("1_hpxoc")]
 position = Vector2(640, 1280)
 ball = NodePath("../Ball")
+
+[node name="ProgressBar" type="ProgressBar" parent="Pointer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -56.0
+offset_top = 8.0
+offset_right = 56.0
+offset_bottom = 35.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+max_value = 200.0
+step = 1.0
 
 [node name="Boundaries" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_ct78i")

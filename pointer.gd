@@ -30,7 +30,7 @@ func _unhandled_input(event: InputEvent) -> void:
 #				print("shoved")
 				shove_delay  = 15
 		if event.button_index == MOUSE_BUTTON_RIGHT:
-			if shove_area.overlaps_body(ball) and game.speed_points == 100:
+			if shove_area.overlaps_body(ball) and game.speed_points == game.max_speed_points:
 				ball.stop()
 				game.set_speed_points(0)
 
