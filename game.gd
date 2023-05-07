@@ -2,6 +2,8 @@ extends Node2D
 
 @onready var ball = $Ball
 
+var started = false
+
 signal ball_touched_floor
 signal game_started
 
@@ -16,7 +18,9 @@ func display_game_over(score: String):
 
 
 func _on_ball_unfrozen() -> void:
-	game_started.emit()
+	if !started:
+		game_started.emit()
+		started = true
 
 
 func _on_retry_pressed() -> void:

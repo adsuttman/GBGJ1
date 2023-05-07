@@ -15,5 +15,6 @@ func stop():
 	PhysicsServer2D.body_set_state(get_rid(),PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)
 
 func unfreeze():
-	freeze = false
-	unfrozen.emit()
+	if freeze:
+		freeze = false
+		unfrozen.emit()
