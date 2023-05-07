@@ -13,6 +13,7 @@ radius = 8.0
 physics_material_override = SubResource("PhysicsMaterial_pqibt")
 gravity_scale = 0.75
 lock_rotation = true
+freeze = true
 script = ExtResource("1_l40je")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]

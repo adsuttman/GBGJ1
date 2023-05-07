@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://d4eeknwdl85f1"]
+[gd_scene load_steps=9 format=3 uid="uid://d4eeknwdl85f1"]
 
 [ext_resource type="PackedScene" uid="uid://b82et6mdevxth" path="res://pointer.tscn" id="1_hpxoc"]
 [ext_resource type="Script" path="res://game.gd" id="1_yayy4"]
 [ext_resource type="PackedScene" uid="uid://c5u2xncxw8sr5" path="res://ball.tscn" id="2_oupdh"]
-[ext_resource type="PackedScene" uid="uid://c82xx3vfs1iw7" path="res://effect_area.tscn" id="4_j4jms"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8m6o"]
 size = Vector2(1280, 720)
@@ -67,13 +66,4 @@ shape = SubResource("RectangleShape2D_o05jv")
 
 [node name="Ball" parent="." instance=ExtResource("2_oupdh")]
 z_index = 1
-position = Vector2(640, 50)
-
-[node name="EffectArea3" parent="." instance=ExtResource("4_j4jms")]
-position = Vector2(656, 264)
-
-[node name="EffectArea2" parent="." instance=ExtResource("4_j4jms")]
-position = Vector2(654, 261)
-
-[node name="EffectArea4" parent="." instance=ExtResource("4_j4jms")]
-position = Vector2(653, 265)
+position = Vector2(637, 355)

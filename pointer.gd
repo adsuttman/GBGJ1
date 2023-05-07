@@ -23,6 +23,7 @@ func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and shove_delay == 0:
 			if shove_area.overlaps_body(ball):
+				ball.unfreeze()
 				var force = position.direction_to(ball.position) * shove_strength
 				ball.apply_central_impulse(force)
 #				print("shoved")

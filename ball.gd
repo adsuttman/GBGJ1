@@ -11,3 +11,6 @@ func _physics_process(delta: float) -> void:
 
 func stop():
 	PhysicsServer2D.body_set_state(get_rid(),PhysicsServer2D.BODY_STATE_LINEAR_VELOCITY, Vector2.ZERO)
+
+func unfreeze():
+	freeze = false
