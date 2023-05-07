@@ -35,17 +35,17 @@ ball = NodePath("../Ball")
 [node name="Ball" parent="." instance=ExtResource("2_oupdh")]
 position = Vector2(640, 50)
 
-[node name="StaticBody2D" type="StaticBody2D" parent="."]
+[node name="Boundaries" type="StaticBody2D" parent="."]
 physics_material_override = SubResource("PhysicsMaterial_ct78i")
 
-[node name="Ceiling" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="Ceiling" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(640, -25)
 shape = SubResource("RectangleShape2D_o05jv")
 
-[node name="LeftWall" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="LeftWall" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(-25, 335)
 shape = SubResource("RectangleShape2D_axyja")
 
-[node name="RightWall" type="CollisionShape2D" parent="StaticBody2D"]
+[node name="RightWall" type="CollisionShape2D" parent="Boundaries"]
 position = Vector2(1305, 335)
 shape = SubResource("RectangleShape2D_axyja")
