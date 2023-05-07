@@ -8,6 +8,7 @@ extends Node2D
 @export var positive_color: Color
 @export var negative_color: Color
 
+@onready var shove_distance = $ShoveArea/CollisionShape2D.shape.radius * $ShoveArea/CollisionShape2D.shape.radius
 var shove_delay: int = 0
 
 func _ready() -> void:
@@ -23,7 +24,7 @@ func _physics_process(delta: float) -> void:
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.button_index == MOUSE_BUTTON_LEFT and shove_delay == 0:
-			if shove_area.overlaps_body(ball):
+			if position.distance_squared_to(ball.position) < shove_distance:
 				ball.unfreeze()
 				var force = position.direction_to(ball.position) * shove_strength
 				ball.apply_central_impulse(force)
