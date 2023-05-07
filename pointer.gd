@@ -1,7 +1,7 @@
 extends Node2D
 @onready var shove_area: Area2D = $ShoveArea
-@export var ball:RigidBody2D
-@export var shove_strength: float = 1000
+@export var ball: RigidBody2D
+@export var shove_strength: float = 500
 
 func _physics_process(delta: float) -> void:
 	var mouse_position = get_viewport().get_mouse_position()
