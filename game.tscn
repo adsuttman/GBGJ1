@@ -75,20 +75,5 @@ position = Vector2(656, 264)
 [node name="EffectArea2" parent="." instance=ExtResource("4_j4jms")]
 position = Vector2(654, 261)
 
-[node name="EffectArea" parent="." instance=ExtResource("4_j4jms")]
-position = Vector2(647, 265)
-
-[node name="EffectArea" parent="EffectArea" instance=ExtResource("4_j4jms")]
-position = Vector2(3.20563, -4.75784)
-
-[node name="EffectArea" parent="EffectArea/EffectArea" instance=ExtResource("4_j4jms")]
-position = Vector2(-2.24493, -5.6123)
-
-[node name="EffectArea" parent="EffectArea/EffectArea/EffectArea" instance=ExtResource("4_j4jms")]
-position = Vector2(2.24493, 10.1022)
-
-[node name="EffectArea" parent="EffectArea/EffectArea/EffectArea/EffectArea" instance=ExtResource("4_j4jms")]
-position = Vector2(-17.9594, -1.12247)
-
 [node name="EffectArea4" parent="." instance=ExtResource("4_j4jms")]
 position = Vector2(653, 265)
