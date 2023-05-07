@@ -1,11 +1,8 @@
-[gd_scene load_steps=12 format=3 uid="uid://d4eeknwdl85f1"]
+[gd_scene load_steps=11 format=3 uid="uid://d4eeknwdl85f1"]
 
 [ext_resource type="PackedScene" uid="uid://b82et6mdevxth" path="res://pointer.tscn" id="1_hpxoc"]
 [ext_resource type="Script" path="res://game.gd" id="1_n41f6"]
 [ext_resource type="PackedScene" uid="uid://c5u2xncxw8sr5" path="res://ball.tscn" id="2_oupdh"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8m6o"]
-size = Vector2(1280, 720)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_ct78i"]
 bounce = 0.5
@@ -35,18 +32,6 @@ font_color = Color(0, 0, 0, 1)
 [node name="Game" type="Node2D"]
 script = ExtResource("1_n41f6")
 max_speed_points = 200
-
-[node name="PlayArea" type="Area2D" parent="."]
-visible = false
-priority = 2.0
-gravity = 5.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayArea"]
-z_index = 1
-position = Vector2(640, 360)
-shape = SubResource("RectangleShape2D_k8m6o")
-debug_color = Color(1, 0.6, 0.701961, 0.419608)
-metadata/_edit_lock_ = true
 
 [node name="Background" type="Polygon2D" parent="."]
 polygon = PackedVector2Array(0, 0, 0, 720, 1280, 720, 1280, 0)
@@ -182,7 +167,7 @@ offset_right = 128.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "Left Click: Shove
-Right Click(When Charged): Catch
+Right Click (When Charged): Catch
 ESC: Return to Main Menu"
 label_settings = SubResource("LabelSettings_ufv1v")
 horizontal_alignment = 1
