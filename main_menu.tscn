@@ -58,12 +58,20 @@ text = "Score Mode"
 [node name="VSeparator" type="VSeparator" parent="Panel/VFlowContainer"]
 layout_mode = 2
 
+[node name="FrenzyMode" type="Button" parent="Panel/VFlowContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+text = "Score Frenzy Mode"
+
+[node name="VSeparator2" type="VSeparator" parent="Panel/VFlowContainer"]
+layout_mode = 2
+
 [node name="TimerMode" type="Button" parent="Panel/VFlowContainer"]
 layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "Timer Mode"
 
-[node name="VSeparator2" type="VSeparator" parent="Panel/VFlowContainer"]
+[node name="VSeparator3" type="VSeparator" parent="Panel/VFlowContainer"]
 layout_mode = 2
 
 [node name="FreePlay" type="Button" parent="Panel/VFlowContainer"]
@@ -71,9 +79,10 @@ layout_mode = 2
 mouse_default_cursor_shape = 2
 text = "Free Play"
 
-[node name="VSeparator3" type="VSeparator" parent="Panel/VFlowContainer"]
+[node name="VSeparator4" type="VSeparator" parent="Panel/VFlowContainer"]
 layout_mode = 2
 
 [connection signal="pressed" from="Panel/VFlowContainer/ScoreMode" to="." method="_on_score_mode_pressed"]
+[connection signal="pressed" from="Panel/VFlowContainer/FrenzyMode" to="." method="_on_frenzy_mode_pressed"]
 [connection signal="pressed" from="Panel/VFlowContainer/TimerMode" to="." method="_on_timer_mode_pressed"]
 [connection signal="pressed" from="Panel/VFlowContainer/FreePlay" to="." method="_on_free_play_pressed"]

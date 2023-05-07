@@ -14,7 +14,7 @@ func _physics_process(delta: float) -> void:
 	if ball.position.y > 712:
 		ball_touched_floor.emit()
 	print(speed_points)
-
+ 
 func set_speed_points(val: int):
 	speed_points = clampi(val,0,max_speed_points)
 	$Pointer/ProgressBar.value = speed_points
