@@ -24,6 +24,10 @@ func display_game_over(score: String):
 	$Pointer.hide()
 	$GameOver.show()
 
+func _process(delta: float) -> void:
+	if Input.is_action_just_pressed("ui_cancel"):
+		get_tree().change_scene_to_file("res://main_menu.tscn")
+
 
 func _on_ball_unfrozen() -> void:
 	if !started:

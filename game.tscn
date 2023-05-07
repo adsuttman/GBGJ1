@@ -182,7 +182,8 @@ offset_right = 128.5
 grow_horizontal = 2
 grow_vertical = 0
 text = "Left Click: Shove
-Right Click(When Charged): Catch"
+Right Click(When Charged): Catch
+ESC: Return to Main Menu"
 label_settings = SubResource("LabelSettings_ufv1v")
 horizontal_alignment = 1
 
