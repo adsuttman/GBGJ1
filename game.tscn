@@ -14,7 +14,8 @@ bounce = 0.5
 size = Vector2(1380, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_axyja"]
-size = Vector2(50, 720)
+resource_name = "WallRec"
+size = Vector2(50, 820)
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tarvr"]
 rough = true
