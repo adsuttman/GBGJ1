@@ -37,4 +37,5 @@ label_settings = SubResource("LabelSettings_j6bhq")
 [node name="Timer" type="Timer" parent="."]
 process_callback = 0
 
+[connection signal="ball_touched_floor" from="Game" to="." method="_on_game_ball_touched_floor"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
