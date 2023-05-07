@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://445l5k2yom0c"]
+[gd_scene load_steps=3 format=3 uid="uid://445l5k2yom0c"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_2ypc0"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_q4tkm"]
 font_size = 64
@@ -11,6 +13,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 4
+script = ExtResource("1_2ypc0")
 
 [node name="Panel" type="Panel" parent="."]
 layout_mode = 0
@@ -70,3 +73,5 @@ text = "Free Play"
 
 [node name="VSeparator3" type="VSeparator" parent="Panel/VFlowContainer"]
 layout_mode = 2
+
+[connection signal="pressed" from="Panel/VFlowContainer/FreePlay" to="." method="_on_free_play_pressed"]

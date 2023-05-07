@@ -1,7 +1,6 @@
-[gd_scene load_steps=9 format=3 uid="uid://d4eeknwdl85f1"]
+[gd_scene load_steps=8 format=3 uid="uid://d4eeknwdl85f1"]
 
 [ext_resource type="PackedScene" uid="uid://b82et6mdevxth" path="res://pointer.tscn" id="1_hpxoc"]
-[ext_resource type="Script" path="res://game.gd" id="1_yayy4"]
 [ext_resource type="PackedScene" uid="uid://c5u2xncxw8sr5" path="res://ball.tscn" id="2_oupdh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8m6o"]
@@ -22,7 +21,6 @@ rough = true
 absorbent = true
 
 [node name="Game" type="Node2D"]
-script = ExtResource("1_yayy4")
 
 [node name="PlayArea" type="Area2D" parent="."]
 priority = 2.0
